@@ -1,0 +1,19 @@
+<div class="col">
+  <div *ngIf="arenas">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let arena of arenas | async">
+        <td>{{ arena.id }}</td>
+        <td>{{ arena.name }}</td>
+        <td>{{ arena.userId }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
